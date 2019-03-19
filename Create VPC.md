@@ -2,10 +2,10 @@
 
 1. Creating a VPC
 
-~~~
+~~~sh
 aws ec2 create-vpc  --cidr-block 10.10.0.0/16
 ~~~
-   #### Note: Note down the VPC ID: vpc-0a04dbbb0b09ab041
+    #### Note: Note down the VPC ID: vpc-0a04dbbb0b09ab041
 
 2. Creating a Subnet
 I want to create 3 subnets
