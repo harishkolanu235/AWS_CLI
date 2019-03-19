@@ -25,18 +25,18 @@ aws ec2 create-internet-gateway
 aws ec2 attach-internet-gateway --internet-gateway-id igw-09fedd5a556bd2ed5 --vpc-id vpc-0a04dbbb0b09ab041
 ~~~
 
-#####Step 4: Create Route Table and add subnet to it
+##### Step 4: Create Route Table and add subnet to it
 ~~~
 aws ec2 create-route-table --vpc-id vpc-0a04dbbb0b09ab041 
 ~~~
 Note: Route Table Id: rtb-09db61346e72e9467
 
-#####Step 5: Create a Route towards IGW for Route Table
+##### Step 5: Create a Route towards IGW for Route Table
 ~~~
 aws ec2 create-route --route-table-id rtb-09db61346e72e9467 --gateway-id igw-09fedd5a556bd2ed5 --destination-cidr-block 0.0.0.0/0
 ~~~
 
-#####Step 6: Associate Route Table to Subnets
+##### Step 6: Associate Route Table to Subnets
 ~~~
 aws ec2 associate-route-table --route-table-id rtb-09db61346e72e9467 --subnet-id subnet-09fd8052ec8966091
 
