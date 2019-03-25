@@ -12,6 +12,7 @@
 
 3. Create Security Group Rules
 
+
 4. Create a RDS DB
    ~~~
    aws rds create-db-instance --db-name "mysqlrds" --db-instance-identifier "sql-rds-cli" --allocated-storage 20 --db-instance-class db.t2.micro --engine mysql --master-username root --master-user-password root1234 --db-subnet-group-name mysqldbsubnetgroup --backup-retention-period 0 --publicly-accessible 
